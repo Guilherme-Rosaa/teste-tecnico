@@ -1,0 +1,14 @@
+Para disponibilizar a aplicação na AWS, eu seguiria estas etapas:
+
+Para o frontend, desenvolvido em Angular, primeiro geraria os arquivos de produção otimizados no diretório dist/.
+Em seguida,criaria um bucket no Amazon S3, configurando-o para hospedar um site estático e definindo index.html como o documento principal.
+Carregaria os arquivos do diretório dist/ para o bucket S3 e ajustaria as permissões para permitir o acesso público.
+Opcionalmente, configuraria o Amazon CloudFront para melhorar o desempenho e a segurança, criando uma distribuição que apontasse para o bucket S3 e ajustando as configurações conforme necessário.
+
+Para o backend, desenvolvido em Node.js, começaria criando uma instância no Amazon EC2 com uma AMI que já tenha o Node.js instalado, como uma AMI do Ubuntu.
+Após configurar a instância e gerar uma chave SSH, conectaria à instância via SSH.
+Atualizaria o sistema, instalaria Node.js e npm se necessário, e baixaria o código da API para o diretório do backend, instalando as dependências necessárias.
+Iniciaria a API e garantiria que a instância EC2 estivesse configurada para permitir o tráfego na porta usada pela API (por exemplo, porta 3001).
+Opcionalmente, se fosse mudar o banco de dados, utilizaria o Amazon RDS para criar e gerenciar o banco de dados e configuraria a conexão da API com ele.
+
+Essas seriam as etapas que eu seguiria para disponibilizar a aplicação na AWS.
