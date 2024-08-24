@@ -37,3 +37,42 @@ ul {
   margin-bottom: 0.2rem;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .tarefa {
+    gap: 1rem;
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  ul {
+    width: 70vw;
+    height: auto;
+    max-height: 30vh;
+    font-size: 0.75rem;
+  }
+
+  .btn-concluir {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .card-tarefa {
+    width: 80vw;
+  }
+
+  .container-btn{
+    display: grid;
+  }
+
+  span{
+
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+  }
+}

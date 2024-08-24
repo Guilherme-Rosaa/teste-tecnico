@@ -37,3 +37,33 @@
   min-width: 1rem;
   height: 1rem;
 }
+
+@media (max-width: 768px) {
+  .card-tarefa::before {
+    left: -10px;
+    width: 15px;
+  }
+  .card-tarefa{
+    width: 70vw;
+  }
+
+  .campo {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-cadastro-tarefa-container {
+    width: 100%;
+  }
+
+  .inp-cadastro-tarefa {
+    margin-left: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .espaco {
+    min-width: 0.5rem;
+    height: 0.5rem;
+  }
+}
