@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "teste",
+            "database": "${workspaceFolder:teste-tecnico-api}/database.db"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

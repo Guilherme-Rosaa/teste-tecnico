@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+    "start:api": "cd teste-tecnico-api && npm start",
+    "start:frontend": "cd teste-tecnico-interface && ng serve",
+    "start": "concurrently \"npm run start:api\" \"npm run start:frontend\""
+  }
+}
