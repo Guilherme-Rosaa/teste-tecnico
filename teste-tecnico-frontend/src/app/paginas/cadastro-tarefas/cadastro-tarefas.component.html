@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="card-tarefa">
+
+    <div class="card-cadastro-tarefa-container">
+      <div class="campo espaco"></div>
+      <div class="campo espaco"></div>
+
+      <div class="campo">
+        <label for="tarefa">Tarefa:</label>
+        <input id="tarefa" type="text" class="inp-cadastro-tarefa" placeholder="Tarefa" aria-label="Tarefa"
+          aria-describedby="basic-addon1" [(ngModel)]="tarefa">
+      </div>
+
+      <div class="campo">
+        <label for="prioridade">Prioridade:</label>
+
+        <select class="inp-cadastro-tarefa" [(ngModel)]="prioridadeSelecionada">
+          <option *ngFor="let op of prioridadeOptions" [value]="op.valor">
+            {{ op.chave }}
+          </option>
+        </select>
+
+      </div>
+
+      <div class="campo espaco"></div>
+      <div class="campo espaco"></div>
+      <div class="campo espaco"></div>
+
+    </div>
+
+    <div class="container-btn">
+      <button class="btn-cadastro-tarefa" (click)="voltarTarefas()">Tarefas</button>
+      <button class="btn-cadastro-tarefa" (click)="cadastrar()">Cadastrar</button>
+    </div>
+  </div>
+</div>

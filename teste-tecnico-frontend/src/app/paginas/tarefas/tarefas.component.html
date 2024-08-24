@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="card-tarefa">
+
+    <ul>
+      <ng-container *ngFor="let item of tarefas; let i = index;">
+        <li>
+          <div class="tarefa">
+            <span>{{i+1}} - {{item.tarefa}}</span>
+            <span>{{getPrioridadeTexto(item.prioridade)}}</span>
+            <div>
+              <label for="concluido"></label>
+              <button class="btn-concluir" type="checkbox" id="concluido" (click)="concluirTarefa(item.id)">Concluir</button>
+            </div>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+
+    <div class="container-btn">
+      <button class="btn-tarefas" (click)="sair()">Trocar Usuario</button>
+      <button class="btn-tarefas" (click)="adicionarTarefa()">Adicionar Tarefa</button>
+    </div>
+  </div>
+</div>

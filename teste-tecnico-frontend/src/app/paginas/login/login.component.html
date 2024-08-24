@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card-login">
+
+
+    <div class="card-login-container">
+      <div class="campo">
+        <label for="email">E-mail:</label>
+        <div>
+          <input id="email" type="text" class="inp-login" placeholder="Informe seu e-mail" aria-label="Email"
+            aria-describedby="basic-addon1" [(ngModel)]="email">
+        </div>
+      </div>
+
+      <div class="campo" style="border: none;">
+        <label for="senha">Senha:</label>
+        <div>
+          <input id="senha" type="password" class="inp-login" placeholder="Informe sua senha" aria-label="Senha"
+            aria-describedby="basic-addon1" [(ngModel)]="senha">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-btn">
+      <button class="btn-login" (click)="cadastro()">Sou Novo Aqui</button>
+      <button class="btn-login" (click)="fazerLogin()">Login</button>
+    </div>
+  </div>
+</div>

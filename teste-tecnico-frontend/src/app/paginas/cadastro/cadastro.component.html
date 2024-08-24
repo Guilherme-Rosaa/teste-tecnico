@@ -1,0 +1,46 @@
+<form [formGroup]="formCadastro" (ngSubmit)="cadastrar()">
+  <div class="container">
+    <div class="card-cadastro">
+      <div class="card-cadastro-container">
+        <div class="card-campo">
+          <label for="nome">Nome:</label>
+          <div>
+            <input id="nome" formControlName="nome" type="text" class="inp-cadastro" placeholder="Nome de usuário"
+              aria-label="Nome" aria-describedby="basic-addon1">
+            <div *ngIf="formCadastro.get('nome')?.invalid && formCadastro.get('nome')?.touched">
+              <small class="error" *ngIf="formCadastro.get('nome')?.errors?.['required']">Nome é obrigatório.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-campo">
+          <label for="email">E-mail:</label>
+          <div>
+            <input id="email" formControlName="email" type="email" class="inp-cadastro" placeholder="Informe seu e-mail"
+              aria-label="Email" aria-describedby="basic-addon1">
+            <div *ngIf="formCadastro.get('email')?.invalid && formCadastro.get('email')?.touched">
+              <small class="error" *ngIf="formCadastro.get('email')?.errors?.['required']">E-mail é obrigatório.</small>
+              <small class="error" *ngIf="formCadastro.get('email')?.errors?.['email']">E-mail inválido.</small>
+            </div>
+          </div>
+        </div>
+
+        <div style="border: none;" class="card-campo">
+          <label for="senha">Senha:</label>
+          <div>
+            <input id="senha" formControlName="senha" type="password" class="inp-cadastro" placeholder="Informe sua senha"
+              aria-label="Senha" aria-describedby="basic-addon1">
+            <div *ngIf="formCadastro.get('senha')?.invalid && formCadastro.get('senha')?.touched">
+              <small class="error" *ngIf="formCadastro.get('senha')?.errors?.['required']">Senha é obrigatória.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-btn">
+        <button type="button" class="btn-cadastro" (click)="voltarLogin()">Voltar para o Login</button>
+        <button type="submit" class="btn-cadastro" [disabled]="formCadastro.invalid">Cadastrar</button>
+      </div>
+    </div>
+  </div>
+</form>

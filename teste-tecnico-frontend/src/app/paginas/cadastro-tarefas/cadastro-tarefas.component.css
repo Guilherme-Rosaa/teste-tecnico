@@ -1,0 +1,39 @@
+.card-tarefa::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(transparent 50%, #333 50%);
+  background-size: 20px 20px;
+  background-repeat: repeat-y;
+  z-index: 1;
+}
+
+.campo {
+  display: flex;
+  border-bottom: 1px solid black;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+  width: 39vw;
+}
+
+.card-cadastro-tarefa-container {
+  width: 39vw;
+  display: grid;
+  justify-content: center;
+}
+
+.inp-cadastro-tarefa {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.espaco {
+  min-width: 1rem;
+  height: 1rem;
+}

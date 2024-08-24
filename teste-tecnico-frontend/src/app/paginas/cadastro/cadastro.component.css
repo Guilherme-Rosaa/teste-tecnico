@@ -1,0 +1,53 @@
+.card-cadastro {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 60vh;
+  background-color: gray;
+  box-shadow: 0px 0px 20px 1px rgba(189, 189, 189, 1);
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+}
+
+.card-cadastro-container {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 15px;
+  display: grid;
+  width: 30vw;
+}
+
+.card-campo {
+  display: flex;
+  border-bottom: 3px solid black;
+  padding: 1rem;
+}
+
+.card-campo label {
+  margin-right: 0.5rem;
+}
+
+input {
+  border: none;
+  font-size: 1rem;
+}
+
+input:focus{
+  border: none;
+  outline: none;
+}
+
+.card-cadastro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(transparent 50%, #333 50%);
+  background-size: 20px 20px;
+  background-repeat: repeat-y;
+  z-index: 1;
+}
